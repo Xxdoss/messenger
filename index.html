@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messenger</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+        <div id="settings">
+            <div class="settings_img"></div>
+            Настройки
+        </div>
+        <div id="exit">
+            <div class="exit_img"></div>
+            Выход
+        </div>
+
+        <div id="chat">
+
+        </div>
+
+        <div class="chat_input_area">
+            <form id="send_message">
+                <input id = 'input_message' type="text" placeholder="Напишите сообщение..." autocomplete="off">
+            </form>
+            <div id="send_img"></div>
+        </div>
+    </div>
+
+    <div id="settings_popup">
+        <div class="settings_menu">
+            <div class="settings">
+                <div class="settings_img"></div>
+                Настройки
+            </div>
+            <div id="close_settings_img"></div>
+            <p class="chat_name">Ваше имя в чате</p>
+            <form id="chat_name">
+                <input id='change_name' type="text" placeholder="..." autocomplete="off">
+            </form>
+        </div>
+    </div>
+
+    <div id="authorization_popup">
+        <p class="authorization">Авторизация</p>
+        <div class="authorization_img"></div>
+        <form id="authorization_form">
+            <input id="authorization_input" type="text" placeholder="Введите вашу почту" autocomplete="off">
+        </form>
+        <div id="get_code">Получить код</div>
+        <div id="enter_code">Ввести код</div>
+    </div>
+
+    <div id="confirmation_popup">
+        <p class="confirmation">Подтверждение</p>
+        <div class="confirmation_img"></div>
+        <form id="confirmation_form">
+            <input id="confirmation_input" type="text" placeholder="Введите код" autocomplete="off">
+        </form>
+        <div id="login">Войти</div>
+    </div>
+
+    <template id="your_template">
+         <div id="your_message">
+            <p id="name"></p>
+            <p id="time"></p>
+            <div id="message_text"></div>
+        </div>
+    </template>
+
+    <template id="another_template">
+        <div id="another_message">
+            <p id="name"></p>
+            <p id="time"></p>
+            <div id="message_text"></div>
+        </div>
+    </template>
+
+    <template id="new_message_template">
+        <div id="new_message">
+            <div id="message_count">
+                <p id="count"></p>
+            </div>
+        </div>
+    </template>
+
+    <template id="all_message_loaded_template">
+        <div id="all_message_loaded">
+            <p id="all_loaded"></p>
+        </div>
+    </template>
+
+    <script  type="module" src="main.js"></script>
+</body>
+</html>

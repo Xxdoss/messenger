@@ -1,0 +1,418 @@
+#main {
+    position: absolute;
+    width: 480px;
+    height: 800px;
+    border: 2px solid black;
+    border-radius: 3px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Segoe UI';
+    display: block;
+}
+
+#settings {
+    position: relative;
+    height: 40px;
+    width: 190px;
+    text-align: right;
+    font-size: 26px;
+    font-weight: 900;
+    cursor: pointer;
+    margin: 10px 0px 0px 10px;
+}
+
+.settings_img{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background: url('https://cdn-icons-png.flaticon.com/512/263/263074.png') 100% 100% no-repeat;
+    background-size: cover;
+}
+
+#exit {
+    position: relative;
+    height: 40px;
+    width: 150px;
+    float: right;
+    text-align: left;
+    font-size: 26px;
+    font-weight: 900;
+    cursor: pointer;
+    margin: -40px 10px 0px 10px;
+}
+
+.exit_img{
+    position: relative;
+    height: 40px;
+    width: 40px;
+    background: url('https://cdn-icons-png.flaticon.com/512/1617/1617409.png') 100% 100% no-repeat;
+    background-size: cover;
+    float: right;
+}
+
+#chat{
+    position: absolute;
+    width: 100%;
+    height: 82%;
+    top: 8%;
+    overflow: auto;
+}
+
+#all_message_loaded{
+    position: relative;
+    background-color: #ffdadabd; /* не прочитанное*/
+    float: right;
+    border-radius: 5px;
+    width: 90%;
+    height: 40px;
+    margin: 10px 20px 10px 0px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 900;
+}
+
+#all_loaded{
+    margin: 0;
+}
+
+#reply_area{
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    background: url('https://cdn-icons-png.flaticon.com/512/3388/3388991.png') 100% 100% no-repeat;
+    background-size: cover;
+    right: 5px;
+    bottom: 5px;
+    cursor: pointer;
+}
+
+#new_message{
+    position:fixed;
+    height: 50px;
+    width: 50px;
+    right: 25px;
+    background: url('https://thumb.cloud.mail.ru/weblink/thumb/xw1/RwA4/HV3uqcran') 100% 100% no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#message_count {
+    font-size: 16px;
+    font-weight: 900;
+    height: 20px;
+    width: 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    background-color: #ff3535;
+    margin: -2px 0px 0px 35px;
+}
+
+#count {
+    margin: -2px 0px 0px 0px;
+}
+
+#chat::-webkit-scrollbar {
+    width: 10px;
+}
+
+#chat::-webkit-scrollbar-track {
+    -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+    background-color: #d4d4d4;
+    border-radius: 10px;
+}
+
+#chat::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: linear-gradient(180deg, #686868, #313131);
+}
+
+
+#your_message{
+    position: relative;
+    background-color: #d9d7d7bd; /* не прочитанное*/
+    float: right;
+    border-radius: 5px;
+    min-width: 230px;
+    max-width: 300px;
+    min-height: 50px;
+    overflow: hidden;
+    word-wrap: break-word;
+    margin: 10px 20px 10px 0px;
+}
+
+#another_message{
+    position: relative;
+    background-color: #e0ddddbd; /*прочитанное*/
+    float: left;
+    border-radius: 5px;
+    min-width: 230px;
+    max-width: 300px;
+    min-height: 50px;
+    overflow: hidden;
+    word-wrap: break-word;
+    margin: 10px 20px 10px 20px;
+}
+
+#name{
+    font-size: 20px;
+    font-weight: 900;
+    margin: 5px 0px 0px 10px;
+}
+
+#time{
+    position: relative;
+    font-size: 16px;
+    font-weight: 800;
+    float: right;
+    margin: -27px 10px 0px 10px;
+}
+
+#message_text{
+    width: 90%;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 5px 0px 10px 10px;
+}
+
+.chat_input_area{
+    position: absolute;
+    min-width: 100%;
+    min-height: 8%;
+    top: 92%;
+    border: 2px solid black;
+    border-radius: 3px;
+    margin: -2px 0px 0px -2px;
+}
+
+#input_message{
+    position: absolute;
+    height: 40px;
+    width: 70%;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    font-family: 'Segoe UI';
+    font-weight: 800;
+}
+
+#send_img{
+    float: right;
+    height: 60px;
+    width: 60px;
+    background: url('https://cdn-icons-png.flaticon.com/512/6492/6492707.png') 100% 100% no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    margin: 2px 20px 0px 0px;
+}
+
+#input_message::-webkit-input-placeholder {
+    font-size: 20px;
+    font-family: 'Segoe UI';
+    font-weight: 900;
+}
+
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+input {
+    outline:none;
+    border: none;
+}
+
+body{
+    margin: 0;
+}
+
+#settings_popup{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #3131319f;
+    display: none;
+}
+
+.settings_menu{
+    position: absolute;
+    width: 650px;
+    height: 420px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Segoe UI';
+}
+
+.settings {
+    position: relative;
+    height: 40px;
+    width: 190px;
+    text-align: right;
+    font-size: 26px;
+    font-weight: 900;
+    margin: 10px 0px 0px 10px;
+}
+
+#close_settings_img{
+    height: 40px;
+    width: 40px;
+    float: right;
+    background: url('https://cdn-icons-png.flaticon.com/512/1004/1004763.png')100% 100% no-repeat;
+    background-size: cover;
+    margin: -40px 10px 0px 0px;
+    cursor: pointer;
+}
+
+.chat_name{
+    position: absolute;
+    font-size: 30px;
+    font-weight: 900;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#change_name{
+    position: absolute;
+    height: 40px;
+    width: 90%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 28px;
+    font-family: 'Segoe UI';
+    font-weight: 900;
+}
+
+#change_name::-webkit-input-placeholder {
+    font-size: 28px;
+    font-family: 'Segoe UI';
+    font-weight: 900;
+    color: black;
+}
+
+#authorization_popup {
+    position: absolute;
+    width: 650px;
+    height: 420px;
+    border: 2px solid black;
+    border-radius: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Segoe UI';
+    display: none;
+}
+
+.authorization{
+    font-size: 28px;
+    font-weight: 900;
+    margin: 10px 0px 0px 60px;
+}
+
+.authorization_img{
+    height: 42px;
+    width: 42px;
+    background: url('https://cdn-icons-png.flaticon.com/512/1000/1000997.png')100% 100% no-repeat;
+    background-size: cover;
+    margin: -40px 0px 0px 10px;
+}
+
+#authorization_input{
+    position: absolute;
+    height: 60px;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 26px;
+    font-weight: 900;
+    text-align: center;
+}
+
+#authorization_input::-webkit-input-placeholder {
+    font-size: 28px;
+    font-weight: 900;
+    text-align: center;
+}
+
+#get_code{
+    position: absolute;
+    top: 65%;
+    font-size: 26px;
+    font-weight: 900;
+    cursor: pointer;
+    margin: 0px 0px 0px 50px;
+}
+
+#enter_code{
+    position: absolute;
+    top: 65%;
+    font-size: 26px;
+    font-weight: 900;
+    cursor: pointer;
+    margin: 0px 0px 0px 410px;
+}
+
+#confirmation_popup{
+    position: absolute;
+    width: 650px;
+    height: 420px;
+    border: 2px solid black;
+    border-radius: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Segoe UI';
+    display: none;
+}
+
+.confirmation{
+    font-size: 28px;
+    font-weight: 900;
+    margin: 10px 0px 0px 60px;
+}
+
+.confirmation_img{
+    height: 42px;
+    width: 42px;
+    background: url('https://cdn-icons-png.flaticon.com/512/467/467129.png')100% 100% no-repeat;
+    background-size: cover;
+    margin: -40px 0px 0px 10px;
+}
+
+#confirmation_input{
+    position: absolute;
+    height: 60px;
+    width: 80%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 26px;
+    font-weight: 900;
+    text-align: center;
+}
+
+#confirmation_input::-webkit-input-placeholder {
+    font-size: 28px;
+    font-weight: 900;
+    text-align: center;
+}
+
+#login{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    font-weight: 900;
+    cursor: pointer;
+}
